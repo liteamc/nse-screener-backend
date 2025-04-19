@@ -1,4 +1,11 @@
-pip install fastapi uvicorn requests
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "NSE Screener is working!"}
+
 fastapi
 uvicorn
 yfinance
